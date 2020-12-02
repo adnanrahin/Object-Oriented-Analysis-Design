@@ -20,4 +20,17 @@ public class InventoryDAO {
     public void setGuitars(List<Guitar> guitars) {
         this.guitars = guitars;
     }
+
+    public Guitar getGuitar(String serialNumber) {
+        for (Guitar guitar : guitars) {
+            if (guitar.getSerialNumber().equals(serialNumber))
+                return guitar;
+        }
+        return null;
+    }
+
+    public Guitar search() {
+        return null;
+    }
+
 }
