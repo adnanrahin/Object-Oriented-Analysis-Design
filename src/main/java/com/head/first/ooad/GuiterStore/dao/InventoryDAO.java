@@ -1,4 +1,4 @@
-package com.head.first.ooad.GuiterStore.doa;
+package com.head.first.ooad.GuiterStore.dao;
 
 import com.head.first.ooad.GuiterStore.domain.Guitar;
 
