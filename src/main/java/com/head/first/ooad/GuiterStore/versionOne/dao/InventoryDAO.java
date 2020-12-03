@@ -1,6 +1,6 @@
 package com.head.first.ooad.GuiterStore.versionOne.dao;
 
-import com.head.first.ooad.GuiterStore.versionOne.domain.Guitar;
+import com.head.first.ooad.GuiterStore.versionOne.model.Guitar;
 
 import java.util.ArrayList;
 import java.util.List;
