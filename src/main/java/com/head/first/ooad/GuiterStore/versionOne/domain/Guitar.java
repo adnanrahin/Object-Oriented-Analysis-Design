@@ -1,4 +1,4 @@
-package com.head.first.ooad.GuiterStore.domain;
+package com.head.first.ooad.GuiterStore.versionOne.domain;
 
 import java.util.Objects;
 

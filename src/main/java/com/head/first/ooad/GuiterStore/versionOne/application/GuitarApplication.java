@@ -1,7 +1,7 @@
-package com.head.first.ooad.GuiterStore.application;
+package com.head.first.ooad.GuiterStore.versionOne.application;
 
-import com.head.first.ooad.GuiterStore.dao.InventoryDAO;
-import com.head.first.ooad.GuiterStore.domain.Guitar;
+import com.head.first.ooad.GuiterStore.versionOne.dao.InventoryDAO;
+import com.head.first.ooad.GuiterStore.versionOne.domain.Guitar;
 
 public class GuitarApplication {
 
