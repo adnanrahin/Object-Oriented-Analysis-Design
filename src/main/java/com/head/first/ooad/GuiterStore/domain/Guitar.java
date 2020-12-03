@@ -84,9 +84,7 @@ public class Guitar {
         if (this == o) return true;
         if (!(o instanceof Guitar)) return false;
         Guitar guitar = (Guitar) o;
-        return Double.compare(guitar.getPrice(),
-                getPrice()) == 0 && Objects.equals(getSerialNumber(),
-                guitar.getSerialNumber()) && Objects.equals(getBuilder(),
+        return Objects.equals(getBuilder(),
                 guitar.getBuilder()) && Objects.equals(getModel(),
                 guitar.getModel()) && Objects.equals(getType(),
                 guitar.getType()) && Objects.equals(getBackWood(),
@@ -95,12 +93,11 @@ public class Guitar {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSerialNumber(),
+        return Objects.hash(
                 getBuilder(),
                 getModel(),
                 getType(), getBackWood(),
-                getTopWood(),
-                getPrice());
+                getTopWood());
     }
 
     @Override

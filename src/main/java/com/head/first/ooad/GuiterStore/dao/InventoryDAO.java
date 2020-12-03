@@ -7,10 +7,10 @@ import java.util.List;
 
 public class InventoryDAO {
 
-    private List<Guitar> guitars = new ArrayList<>();
+    private List<Guitar> guitars;
 
-    private InventoryDAO(List<Guitar> guitars) {
-        this.guitars = guitars;
+    private InventoryDAO() {
+        this.guitars = new ArrayList<>();
     }
 
     public List<Guitar> getGuitars() {
@@ -29,7 +29,12 @@ public class InventoryDAO {
         return null;
     }
 
-    public Guitar search() {
+    public Guitar search(Guitar searchGuitar) {
+
+        for (Guitar guitar : guitars) {
+            if (guitar.equals(searchGuitar)) return guitar;
+        }
+
         return null;
     }
 
