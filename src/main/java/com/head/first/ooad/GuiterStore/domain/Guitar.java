@@ -12,6 +12,9 @@ public class Guitar {
     private String topWood;
     private double price;
 
+    public Guitar() {
+
+    }
 
     public Guitar(String serialNumber, String builder, String model, String type, String backWood, String topWood, double price) {
         this.serialNumber = serialNumber;

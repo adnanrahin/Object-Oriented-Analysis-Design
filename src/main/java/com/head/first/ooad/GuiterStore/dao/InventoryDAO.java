@@ -9,7 +9,7 @@ public class InventoryDAO {
 
     private List<Guitar> guitars;
 
-    private InventoryDAO() {
+    public InventoryDAO() {
         this.guitars = new ArrayList<>();
     }
 
@@ -36,6 +36,14 @@ public class InventoryDAO {
         }
 
         return null;
+    }
+
+    public void addGuitar(Guitar guitar) {
+        guitars.add(guitar);
+    }
+
+    public void show() {
+        guitars.forEach(System.out::println);
     }
 
 }
