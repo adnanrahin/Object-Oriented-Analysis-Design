@@ -1,6 +1,7 @@
 package com.head.first.ooad.GuiterStore.versionThree.dao;
 
 import com.head.first.ooad.GuiterStore.versionThree.model.Guitar;
+import com.head.first.ooad.GuiterStore.versionThree.model.GuitarSpec;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,24 +23,22 @@ public class InventoryDAO {
     }
 
     public Guitar getGuitar(String serialNumber) {
-        for (Guitar guitar : guitars) {
+        for (Guitar guitar : this.guitars) {
             if (guitar.getSerialNumber().equals(serialNumber))
                 return guitar;
         }
         return null;
     }
 
-    public List<Guitar> search(Guitar searchGuitar) {
+    public List<Guitar> search(GuitarSpec spec) {
 
         List<Guitar> guitarsList = new ArrayList<>();
 
-        for (Guitar guitar : guitars) {
-            if (guitar.getBuilder().toString().equalsIgnoreCase(searchGuitar.getBuilder().toString())
-                    && guitar.getModel().equalsIgnoreCase(searchGuitar.getModel())
-                    && guitar.getTopWood().toString().equalsIgnoreCase(searchGuitar.getTopWood().toString())
-                    && guitar.getBackWood().toString().equalsIgnoreCase(searchGuitar.getBackWood().toString())
-                    && guitar.getType().toString().equalsIgnoreCase(searchGuitar.getType().toString())
-            ) guitarsList.add(guitar);
+        for (Guitar guitar : this.guitars) {
+            GuitarSpec guitarSpec = guitar.getGuitarSpec();
+            if (spec.equals(guitarSpec)) {
+                guitarsList.add(guitar);
+            }
         }
 
         return guitarsList;
