@@ -1,29 +1,17 @@
 package com.head.first.ooad.GuiterStore.versionThree.model;
 
-import com.head.first.ooad.GuiterStore.versionThree.model.constants.Builder;
-import com.head.first.ooad.GuiterStore.versionThree.model.constants.Type;
-import com.head.first.ooad.GuiterStore.versionThree.model.constants.Wood;
-
-import java.util.Objects;
-
 public class Guitar {
 
-    private String serialNumber, model;
-
-    private Builder builder;
-    private Type type;
-    private Wood backWood;
-    private Wood topWood;
+    private String serialNumber;
+    private String model;
     private double price;
+    private GuitarSpec guitarSpec;
 
-    public Guitar(String serialNumber, String model, Builder builder, Type type, Wood backWood, Wood topWood, double price) {
+    public Guitar(String serialNumber, String model, double price, GuitarSpec guitarSpec) {
         this.serialNumber = serialNumber;
         this.model = model;
-        this.builder = builder;
-        this.type = type;
-        this.backWood = backWood;
-        this.topWood = topWood;
         this.price = price;
+        this.guitarSpec = guitarSpec;
     }
 
     public String getSerialNumber() {
@@ -42,38 +30,6 @@ public class Guitar {
         this.model = model;
     }
 
-    public Builder getBuilder() {
-        return builder;
-    }
-
-    public void setBuilder(Builder builder) {
-        this.builder = builder;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    public Wood getBackWood() {
-        return backWood;
-    }
-
-    public void setBackWood(Wood backWood) {
-        this.backWood = backWood;
-    }
-
-    public Wood getTopWood() {
-        return topWood;
-    }
-
-    public void setTopWood(Wood topWood) {
-        this.topWood = topWood;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -82,33 +38,14 @@ public class Guitar {
         this.price = price;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Guitar)) return false;
-        Guitar guitar = (Guitar) o;
-        return Objects.equals(getModel(), guitar.getModel()) &&
-                getBuilder() == guitar.getBuilder() &&
-                getType() == guitar.getType() &&
-                getBackWood() == guitar.getBackWood() &&
-                getTopWood() == guitar.getTopWood();
+    public GuitarSpec getGuitarSpec() {
+        return guitarSpec;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getModel(), getBuilder(), getType(), getBackWood(), getTopWood());
+    public void setGuitarSpec(GuitarSpec guitarSpec) {
+        this.guitarSpec = guitarSpec;
     }
 
-    @Override
-    public String toString() {
-        return "Guitar{" +
-                "serialNumber='" + serialNumber + '\'' +
-                ", model='" + model + '\'' +
-                ", builder=" + builder +
-                ", type=" + type +
-                ", backWood=" + backWood +
-                ", topWood=" + topWood +
-                ", price=" + price +
-                '}';
-    }
+
+
 }

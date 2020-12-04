@@ -1,4 +1,4 @@
-package com.head.first.ooad.GuiterStore.versionThree.model.constants;
+package com.head.first.ooad.GuiterStore.versionThree.constants;
 
 public enum Type {
 
